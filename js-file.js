@@ -93,6 +93,7 @@ function operate(value1, value2, operator){
 }
 
 function resultSoftReset(){
+    result = Number(result).toFixed(4);
     updateDisplay(result.toString());
     secondValue = "";
     currentOperation = "";
