@@ -18,6 +18,12 @@ allButtons.forEach(button =>{
             updateDisplay(secondValue);
         } else if(button.classList.contains("operator") && firstValue){
             currentOperation = button.textContent;
+        } else if (button.classList.contains("delete-left") && !currentOperation && firstValue){
+            firstValue = firstValue.slice(0,-1);
+            firstValue.length === 0 ? updateDisplay(0) : updateDisplay(firstValue);
+        } else if (button.classList.contains("delete-left") && currentOperation && secondValue){
+            secondValue = secondValue.slice(0,-1);
+            secondValue.length === 0 ? updateDisplay(0) : updateDisplay(secondValue);
         }
     })
 });
