@@ -30,6 +30,7 @@ allButtons.forEach(button =>{
         } else if (button.classList.contains("show-result") && currentOperation && (firstValue&&secondValue)){
             operate(firstValue,secondValue,currentOperation);
             resultSoftReset();
+            resetOperatorButton();
         } else if (button.classList.contains("reverse-signal")&& !currentOperation && firstValue){
             firstValue = reverseSignal(firstValue);
             updateDisplay(firstValue);
