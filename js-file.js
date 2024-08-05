@@ -94,10 +94,15 @@ function operate(value1, value2, operator){
 }
 
 function resultSoftReset(){
-    updateDisplay(result.toString());
-    secondValue = "";
-    currentOperation = "";
-    firstValue = result.toString();
+    if (result == "Infinity"){
+        reset();
+        updateDisplay("Can't divide by zero!")
+    } else {
+        updateDisplay(result.toString());
+        secondValue = "";
+        currentOperation = "";
+        firstValue = result.toString();
+    }
 }
 
 function reverseSignal(value){
