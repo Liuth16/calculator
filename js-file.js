@@ -94,7 +94,7 @@ function operate(value1, value2, operator){
 }
 
 function resultSoftReset(){
-    if (result == "Infinity"){
+    if (result == "Infinity" || result == "-Infinity"){
         reset();
         updateDisplay("Can't divide by zero!")
     } else {
